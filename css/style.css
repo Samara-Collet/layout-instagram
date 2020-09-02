@@ -14,38 +14,214 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
 **** PÁGINA INICIAL
 */
 
-/* VARIÁVEIS */
+* {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-decoration: none;
+}
+
+/* VARIÁVEIS ------------------------------------------------------------------------*/
 :root{
-  
+  --font-color: #262626;
+  --cinza-claro: rgba(202, 202, 202, 0.452);
+  --cor-branco: rgb(255, 255, 255);
+  --cor-azul-a: #1c4475;
+  --cor-letra-navposts :rgb(233, 233, 233);
+  --cor-box-shadow :rgba(0, 0, 0, 0.644);
+  --cor-clara-nav-posts: rgb(107, 107, 107);
 }
 
-/*BODY*/
-body{
-
+/*BODY ------------------------------------------------------------------------------*/
+body {
+	display: flex;
+	font-family: Helvetica, Arial, sans-serif;
+	flex-direction: column;
 }
 
-/*TOPO*/
+.container {
+	align-self: center;
+	width: 935px;
+	background-color: rgb(248, 248, 248);
+}
+
+/*TOPO -----------------------------------------------------------------------------*/
 header{
-	
+	display: flex;
+	width: 100%;
+	height: 8vh;
+	background-color: var(--cor-branco);
+	border-bottom: 1px solid var(--cinza-claro);
+	align-items: center;
 }
 
-/*RODAPÉ*/
-footer{
+header img {
+	padding-left: 2vw;
+	padding-top: 1vh;
+}
 
+/* PERFIL -------------------------------------------------------------------------*/
+.profile-content{
+	display: flex;
+	align-items: center;
+}
+
+.profile-content h1 {
+	font-weight: 400;
+	font-size: 1.8em;
+}
+
+.profile-content h2 {
+	font-size: 1em;
+	font-weight: bold;
+}
+/* FOTO DO PERFIL ----------------------------------------------------------------*/
+.profile-photo {
+	display: flex;
+	flex: 1 2 40%;
+	justify-content: center;
+}
+
+.profile-photo img {
+	border-radius: 77px;
+	border: 4px solid var(--cor-branco);
+	box-shadow: 0px 0px 4px 0px var(--cor-box-shadow);
+}
+
+/* DADOS DO PERFIL ----------------------------------------------------------------*/
+.profile-data {
+	display: flex;
+}
+
+.profile-data p {
+	margin-right: 5vh; /* 30px */
+	line-height: 3;
+}
+
+.profile-data span {
+	font-weight: bold;
+	font-size: 1.05em
+}
+
+/* INFORMAÇÕES DO PERFIL -----------------------------------------------------------*/
+.profile-info {
+	flex: 1 2 90%;
+	padding: 5vh; /* 30px */
+	line-height: 1.5;
+}
+
+.profile-info a {
+	font-weight: bold;
+	color: var(--cor-azul-a);
 }
 
 /*PÁGINA INICIAL*/
-main{
-	
+
+/* DESTAQUES ---------------------------------------------------------------------*/
+.highlighted-stories{
+	margin: 5vh 2vw; /* 30px */
 }
-	main .profile-content{
 
-	}
+.highlighted-stories ul {
+	display: flex;
+}
 
-	main .highlighted-stories{
+.highlighted-stories figure{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 1.5vw;
+	color: var(--font-color);
+	font-weight: bold;
+}
 
-	}
+.highlighted-stories figcaption {
+	padding-top: 2vh;
+}
 
-	main .profile-posts{
+.highlighted-stories img {
+	border-radius: 77px;
+	border: 3px solid var(--cor-branco);
+	width: 70px; 
+	box-shadow: 0px 0px 4px 0px var(--cor-box-shadow);
+}
 
-	}
+/* BASE DOS POSTS -----------------------------------------------------------------*/
+.profile-posts{
+	border-top: 1px solid var(--cinza-claro);
+	margin-bottom: 6vh;
+	position: relative;
+} 
+
+/* NAV POSTS : POSTS/IGTV/SAVED/TAGGED --------------------------------------------*/
+.navposts {
+	display: flex;
+	justify-content: center;
+	height: 8vh; /* 50px */
+	align-items: center;
+	font-size: 0.8em; /* 14px */
+	color: var(--cor-letra-navposts);
+	font-weight: bold;
+}
+
+.navposts a{
+	text-transform: uppercase;
+	color: var(--cor-clara-nav-posts);
+	margin: 0 3vh;
+}
+
+.navposts a:first-child {
+	color: var(--font-color);
+}
+
+.navposts a:hover {
+	font-weight: bold;
+	color: var(--font-color);
+}
+
+.navposts i {
+	padding: 0 0.8vh; /* 4px */
+}
+
+/* POSTS --------------------------------------------------------------------------*/
+.profile-posts ul{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.profile-posts img {
+	width: 293px;
+	height: 293px;
+	margin: 10px 5px; /* 10px 5px*/
+}
+
+/*RODAPÉ --------------------------------------------------------------------------*/
+footer{
+	display: flex;
+	height: 12vh;
+	align-items: center;
+	text-transform: uppercase;
+	justify-content: space-between;
+	background-color: var(--cinza-claro);
+	font-size: 0.9em;
+	padding: 0 2vw;
+}
+
+.footer-nav a {
+	color: var(--cor-azul-a);
+	margin: 10px;
+}
+
+.copyright {
+	color: var(--font-color);
+}
+
+
+
+
+
+
+
+
+
